@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Holly Marie Weckler | Web3 Ecosystem Builder &amp; Senior Marketing Leader</title>
   <meta name="description" content="Partnerships and ecosystem leader with 10+ years spanning FinTech, Web3, and developer ecosystems. Director of Partnerships at Detroit Blockchain Center, founder of Copter Consulting." />
+  <meta property="og:title" content="Holly Marie Weckler | Web3 Ecosystem Builder &amp; Senior Marketing Leader" />
+  <meta property="og:description" content="Partnerships and ecosystem leader with 10+ years spanning FinTech, Web3, and developer ecosystems. Director of Partnerships at Detroit Blockchain Center, founder of Copter Consulting." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fintechjedi.github.io/hollyweckler-portfolio/" />
+  <meta property="og:image" content="assets/headshot.jpg" />
+  <link rel="icon" href="assets/headshot.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -614,6 +620,13 @@
       border-radius: 8px;
       border: 1px solid var(--border);
     }
+    .media-grid video {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      grid-column: 1 / -1;
+      background: #000;
+    }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
@@ -777,6 +790,7 @@
           <span class="tag">Web3 Onboarding</span>
         </div>
         <button class="case-read" data-case="pizzadao">View full story &amp; photos →</button>
+        <a href="https://luma.com/xamh1ryu" target="_blank" class="case-read" style="margin-left: 1rem;">Luma ↗</a>
       </div>
 
       <!-- Decentralized December -->
@@ -818,6 +832,7 @@
           <span class="tag">Protocol Marketing</span>
         </div>
         <button class="case-read" data-case="sui">View full story &amp; photos →</button>
+        <a href="https://luma.com/ske782qq" target="_blank" class="case-read" style="margin-left: 1rem;">Luma ↗</a>
       </div>
 
       <!-- ETH Toronto -->
@@ -1035,7 +1050,7 @@
       stats: [["400%","Attendance growth"],["250+","RSVPs"],["4","Sponsors"]],
       desc: "Grew Detroit's Bitcoin Pizza Day from a 40-person meetup into a 250+ person, city-backed activation integrated with Movement Fest and a gamified on-chain POAP Scavenger Hunt. Coordinated sponsors, food and beverage, entertainment, giveaways, vendors, and earned media across multiple partner organizations including PizzaDAO's global network.",
       tags: ["Event Marketing","Community Activation","Web3 Onboarding"],
-      media: ["assets/pizzadao/photo-1.jpg","assets/pizzadao/photo-2.jpg","assets/pizzadao/photo-3.jpg","assets/pizzadao/photo-4.jpg","assets/pizzadao/video-1.mp4","assets/pizzadao/photo-5.jpg"]
+      media: ["assets/pizzadao/photo-1.jpg","assets/pizzadao/photo-2.jpg","assets/pizzadao/photo-3.jpg","assets/pizzadao/photo-4.jpg","assets/pizzadao/photo-5.jpg","assets/pizzadao/photo-6.jpg","assets/pizzadao/photo-7.jpg","assets/pizzadao/photo-8.jpg","assets/pizzadao/photo-9.jpg","assets/pizzadao/video-1.mp4"]
     },
     decdec: {
       kicker: "2024 · Community Event",
@@ -1051,7 +1066,7 @@
       stats: [["60+","Attendees"],["3","Partners"],["🔐","Token-gated"]],
       desc: "Launched Detroit's Sui ecosystem with a token-gated mixer at Bamboo Detroit, bringing together 60+ developers and founders timed to Sui Overflow 2025's global hackathon. Built co-production partnerships with Sui Community, ETH Detroit, and Chainlink, managing registration, budgets, logistics, and sponsor deliverables end to end.",
       tags: ["GTM Strategy","Ecosystem Building","Protocol Marketing"],
-      media: ["assets/sui/photo-1.jpg","assets/sui/photo-2.jpg","assets/sui/photo-3.jpg","assets/sui/video-1.mp4"]
+      media: ["assets/sui/video-1.mp4","assets/sui/photo-1.jpg"]
     },
     ethtoronto: {
       kicker: "2022 · Hackathon",
@@ -1091,38 +1106,43 @@
         `<span class="tag">${t}</span>`
       ).join('');
 
-      // Render real event photos when they exist in /assets/<case-id>/.
-      // Missing files hide themselves (onerror); videos (.mp4) are skipped
-      // until a proper video player is wired in. Drop photos into the folder
+      // Render real event photos and videos when they exist in /assets/<case-id>/.
+      // Missing files hide themselves (onerror). Drop media into the folder
       // and they appear automatically.
       const mediaBox = document.getElementById('modal-media');
       const media = c.media || [];
       mediaBox.innerHTML = '';
       mediaBox.classList.add('media-grid');
+      let shown = 0;
+      const fallback = () => {
+        if (!mediaBox.querySelector('img,video')) {
+          mediaBox.classList.remove('media-grid');
+          mediaBox.textContent = '📷 Event photos and video are coming soon.';
+        }
+      };
       if (media.length) {
-        let imgs = 0;
         media.forEach(src => {
-          if (/\.(mp4|mov|webm)$/i.test(src)) return;
+          if (/\.(mp4|mov|webm)$/i.test(src)) {
+            const v = document.createElement('video');
+            v.src = src;
+            v.controls = true;
+            v.preload = 'metadata';
+            v.onerror = () => { v.remove(); fallback(); };
+            mediaBox.appendChild(v);
+            shown++;
+            return;
+          }
           const img = document.createElement('img');
           img.src = src;
           img.alt = c.title;
-          img.onerror = () => {
-            img.remove();
-            if (!mediaBox.querySelector('img')) {
-              mediaBox.classList.remove('media-grid');
-              mediaBox.textContent = '📷 Event photos are coming soon.';
-            }
-          };
+          img.loading = 'lazy';
+          img.onerror = () => { img.remove(); fallback(); };
           mediaBox.appendChild(img);
-          imgs++;
+          shown++;
         });
-        if (!imgs) {
-          mediaBox.classList.remove('media-grid');
-          mediaBox.textContent = '📷 Event photos are coming soon.';
-        }
+        if (!shown) fallback();
       } else {
-        mediaBox.classList.remove('media-grid');
-        mediaBox.textContent = '📷 Event photos are coming soon.';
+        fallback();
       }
 
       modal.classList.add('open');
