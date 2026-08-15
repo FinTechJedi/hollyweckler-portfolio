@@ -627,11 +627,34 @@
       grid-column: 1 / -1;
       background: #000;
     }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+    .gallery-grid video {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      grid-column: 1 / -1;
+      background: #000;
+      max-height: 480px;
+      object-fit: cover;
+    }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .cases-grid { grid-template-columns: repeat(2, 1fr); }
       .press-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 680px) {
       .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 48px 1.25rem 48px; }
@@ -639,6 +662,7 @@
       .cases-grid { grid-template-columns: 1fr; }
       .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .press-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       section { padding: 56px 1.25rem; }
     }
@@ -871,6 +895,26 @@
         <button class="case-read" data-case="fintechireland">View full story &amp; photos →</button>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- EVENT GALLERY -->
+<section id="gallery" style="background: var(--white);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">On the Ground</div>
+      <h2 class="section-title">Event Highlights</h2>
+      <p class="section-subtitle">Real rooms, real people. A few frames from recent activations.</p>
+    </div>
+    <div class="gallery-grid">
+      <img src="assets/pizzadao/photo-1.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
+      <img src="assets/pizzadao/photo-2.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
+      <img src="assets/pizzadao/photo-3.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
+      <img src="assets/pizzadao/photo-4.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
+      <img src="assets/pizzadao/photo-5.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
+      <img src="assets/sui/photo-1.jpg" alt="Sui Social Detroit" loading="lazy" />
+      <video src="assets/pizzadao/video-1.mp4" controls muted playsinline preload="metadata" poster="assets/pizzadao/photo-1.jpg"></video>
     </div>
   </div>
 </section>
