@@ -9,7 +9,7 @@
   <meta property="og:description" content="Partnerships and ecosystem leader with 10+ years spanning FinTech, Web3, and developer ecosystems. Director of Partnerships at Detroit Blockchain Center, founder of Copter Consulting." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://fintechjedi.github.io/hollyweckler-portfolio/" />
-  <meta property="og:image" content="assets/headshot.jpg" />
+  <meta property="og:image" content="https://fintechjedi.github.io/hollyweckler-portfolio/assets/headshot.jpg" />
   <link rel="icon" href="assets/headshot.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -235,6 +235,47 @@
     }
     .press-strip:hover { background: var(--sky-light); }
     .press-strip span { color: var(--muted); font-weight: 400; }
+
+    /* ── NUMBERS BAND ── */
+    .numbers-band {
+      background: var(--navy);
+      padding: 2.75rem 2rem;
+    }
+    .numbers-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .numbers-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .numbers-lbl {
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: 0.45rem;
+      line-height: 1.5;
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
 
     /* ── SHARED SECTION STYLES ── */
     section { padding: 80px 2rem; }
@@ -654,7 +695,7 @@
     /* ── WATCH / FEATURED VIDEO ── */
     .watch-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
     .watch-card {
@@ -748,6 +789,7 @@
       .cases-grid { grid-template-columns: repeat(2, 1fr); }
       .press-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .watch-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 680px) {
       .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 48px 1.25rem 48px; }
@@ -759,6 +801,8 @@
       .watch-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       section { padding: 56px 1.25rem; }
+      .numbers-band { padding: 2.25rem 1.25rem; }
+      .numbers-inner { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -820,6 +864,16 @@
   </div>
 </header>
 
+<!-- NUMBERS -->
+<section class="numbers-band" aria-label="Career highlights by the numbers">
+  <div class="numbers-inner">
+    <div class="numbers-item"><div class="numbers-val"><span class="num" data-count="10">10</span>+</div><div class="numbers-lbl">Years spanning FinTech &amp; Web3</div></div>
+    <div class="numbers-item"><div class="numbers-val"><span class="num" data-count="2000">2,000</span>+</div><div class="numbers-lbl">Summit attendees managed</div></div>
+    <div class="numbers-item"><div class="numbers-val"><span class="num" data-count="98">98</span>%</div><div class="numbers-lbl">RSVP → turnout rate</div></div>
+    <div class="numbers-item"><div class="numbers-val"><span class="num" data-count="250">250</span>+</div><div class="numbers-lbl">Person flagship activation</div></div>
+  </div>
+</section>
+
 <!-- WATCH -->
 <section id="watch" style="background: var(--white);">
   <div class="section-inner">
@@ -829,6 +883,15 @@
       <p class="section-subtitle">Recaps and reels from recent activations. Click to play.</p>
     </div>
     <div class="watch-grid">
+      <button class="watch-card" data-video="assets/pizzadao/video-1.mp4">
+        <img src="assets/pizzadao/photo-1.jpg" alt="2025 PizzaDAO Global Pizza Party recap" loading="lazy" />
+        <span class="watch-play">▶</span>
+        <span class="watch-caption">
+          <span class="watch-tag">Event Recap · 2025</span>
+          <strong>PizzaDAO Global Pizza Party</strong>
+          <small>Detroit's Bitcoin Pizza Day: from a 40-person meetup to a 250+ person city-backed activation. Watch the recap.</small>
+        </span>
+      </button>
       <button class="watch-card" data-video="assets/decdec/video-1.mp4">
         <img src="assets/decdec/poster.jpg" alt="Decentralized December 2024 recap" loading="lazy" />
         <span class="watch-play">▶</span>
@@ -873,7 +936,7 @@
         <div class="case-stats-row">
           <div class="stat-item"><div class="stat-val">1 of 5</div><div class="stat-lbl">Grant recipients nationally</div></div>
           <div class="stat-item"><div class="stat-val">3</div><div class="stat-lbl">Panelists</div></div>
-          <div class="stat-item"><div class="stat-val">55</div><div class="stat-lbl">Attendees</div></div>
+          <div class="stat-item"><div class="stat-val">🏛️</div><div class="stat-lbl">State reps in the room</div></div>
         </div>
         <div class="case-tags">
           <span class="tag">Policy &amp; Public Affairs</span>
@@ -894,7 +957,7 @@
         <p>Two-part program kicking off Detroit's 2026 builder pipeline. Started with a hands-on coworking and blockchain 101 session at Wayne State's Engineering Building with ETH Detroit, Detroit Blockchain Center, and Wayne State's Women Developer Student Club, then culminated in ETHConf Pitch Night Detroit, where local founders pitched live to judges and investors and the winning team earned a fast-tracked spot to pitch on the ETHConf main stage.</p>
         <div class="case-stats-row">
           <div class="stat-item"><div class="stat-val">512</div><div class="stat-lbl">RSVPs</div></div>
-          <div class="stat-item"><div class="stat-val">86</div><div class="stat-lbl">Attendees</div></div>
+          <div class="stat-item"><div class="stat-val">2</div><div class="stat-lbl">Part program</div></div>
           <div class="stat-item"><div class="stat-val">🏆</div><div class="stat-lbl">Fast-tracked pitch slot</div></div>
         </div>
         <div class="case-tags">
@@ -916,15 +979,15 @@
         <p>Co-hosted a high-energy Blockchain x AI meetup at Bamboo Midtown, bringing together Detroit's on-chain AI agents, DePIN builders, and token visionaries to connect and build the week of Thanksgiving. Built in partnership with CXOMPLEX and Bamboo Midtown, the room put builders from across on-chain AI and DePIN in one place for a night.</p>
         <div class="case-stats-row">
           <div class="stat-item"><div class="stat-val">78</div><div class="stat-lbl">RSVPs</div></div>
-          <div class="stat-item"><div class="stat-val">56</div><div class="stat-lbl">Attendees</div></div>
           <div class="stat-item"><div class="stat-val">2</div><div class="stat-lbl">Partner orgs</div></div>
+          <div class="stat-item"><div class="stat-val">🤖</div><div class="stat-lbl">AI × DePIN builders</div></div>
         </div>
         <div class="case-tags">
           <span class="tag">AI × Blockchain</span>
           <span class="tag">Sponsorship</span>
           <span class="tag">Community Activation</span>
         </div>
-        <button class="case-read" data-case="blockchainai">View full story &amp; photos →</button>
+        <button class="case-read" data-case="blockchainai">View full story →</button>
       </div>
 
       <!-- PizzaDAO -->
@@ -960,8 +1023,8 @@
         <p>Detroit's blockchain holiday party. Recognized by CoinTelegraph as one of the top US crypto holiday gatherings of 2024, alongside events in Atlanta, San Francisco, and Seattle.</p>
         <div class="case-stats-row">
           <div class="stat-item"><div class="stat-val">98%</div><div class="stat-lbl">RSVP → turnout</div></div>
-          <div class="stat-item"><div class="stat-val">68+</div><div class="stat-lbl">Attendees</div></div>
           <div class="stat-item"><div class="stat-val">3</div><div class="stat-lbl">Sponsors</div></div>
+          <div class="stat-item"><div class="stat-val">🎶</div><div class="stat-lbl">Live DJ</div></div>
         </div>
         <div class="case-tags">
           <span class="tag">Community Activation</span>
@@ -981,7 +1044,7 @@
         <p>Launched Detroit's Sui ecosystem with a token-gated mixer at Bamboo Detroit. Brought together 60+ developers and founders, timed to Sui Overflow 2025 global hackathon. Partners included Sui Community, ETH Detroit, and Chainlink.</p>
         <div class="case-stats-row">
           <div class="stat-item"><div class="stat-val">98%</div><div class="stat-lbl">RSVP → turnout</div></div>
-          <div class="stat-item"><div class="stat-val">60+</div><div class="stat-lbl">Attendees</div></div>
+          <div class="stat-item"><div class="stat-val">3</div><div class="stat-lbl">Partner orgs</div></div>
           <div class="stat-item"><div class="stat-val">🔐</div><div class="stat-lbl">Token-gated</div></div>
         </div>
         <div class="case-tags">
@@ -1010,7 +1073,7 @@
           <span class="tag">Hackathon</span>
           <span class="tag">TradFi × Web3</span>
         </div>
-        <button class="case-read" data-case="ethtoronto">View full story &amp; photos →</button>
+        <button class="case-read" data-case="ethtoronto">View full story →</button>
       </div>
 
       <!-- International Event Management -->
@@ -1031,7 +1094,7 @@
           <span class="tag">Speaking</span>
           <span class="tag">Partnerships</span>
         </div>
-        <button class="case-read" data-case="fintechireland">View full story &amp; photos →</button>
+        <button class="case-read" data-case="fintechireland">View full story →</button>
       </div>
 
     </div>
@@ -1056,7 +1119,6 @@
       <img src="assets/sui/photo-1.jpg" alt="Sui Social Detroit" loading="lazy" />
       <img src="assets/sui/photo-3.jpg" alt="Sui Social group shot" loading="lazy" />
       <img src="assets/ethglobaldetroit/photo-3.jpg" alt="ETHConf Pitch Night Detroit" loading="lazy" />
-      <video src="assets/pizzadao/video-1.mp4" controls muted playsinline preload="metadata" poster="assets/pizzadao/photo-1.jpg"></video>
     </div>
   </div>
 </section>
@@ -1217,7 +1279,7 @@
     policypints: {
       kicker: "2026 · Policy & Public Affairs",
       title: "Policy & Pints: The GENIUS Act, Stablecoins & Michigan's Regulatory Future",
-      stats: [["1 of 5","Grant recipients nationally"],["3","Panelists"],["55","Attendees"]],
+      stats: [["1 of 5","Grant recipients nationally"],["3","Panelists"],["🏛️","State reps in the room"]],
       desc: "Selected as 1 of 5 organizations nationally for The Digital Chamber's Policy & Pints microgrant. Held at The Congregation in Detroit, this event served as a legislative kickoff and first touchpoint with Michigan state representatives on how federal and state crypto policy affects payments, consumer protection, and financial innovation. I moderated a panel with Certen Protocol, PayPath AI / Michigan Blockchain Council, and Accorria.",
       tags: ["Policy & Public Affairs","Panel Moderator","Microgrant"],
       media: ["assets/policypints/photo-1.jpg","assets/policypints/photo-2.jpg"]
@@ -1225,7 +1287,7 @@
     ethglobaldetroit: {
       kicker: "2026 · Developer Education & Startup Pitch",
       title: "ETHGlobal Detroit: Cowork to Pitch Night",
-      stats: [["512","RSVPs"],["86","Attendees"],["🏆","Fast-tracked pitch slot"]],
+      stats: [["512","RSVPs"],["2","Part program"],["🏆","Fast-tracked pitch slot"]],
       desc: "A two-part program kicking off Detroit's 2026 builder pipeline. Part one was a hands-on coworking and blockchain 101 session at Wayne State's Engineering Building, built in partnership with ETH Detroit, Detroit Blockchain Center, and Wayne State's Women Developer Student Club, covering Ethereum fundamentals, Chainlink oracle integration, and AI-assisted building. Part two was ETHConf Pitch Night Detroit, where local founders pitched live to judges and investors, with the winning team earning a fast-tracked spot to pitch on the ETHConf main stage.",
       tags: ["Developer Education","Startup Pitch","ETHGlobal"],
       media: ["assets/ethglobaldetroit/photo-1.jpg","assets/ethglobaldetroit/photo-2.jpg","assets/ethglobaldetroit/photo-3.jpg","assets/ethglobaldetroit/photo-4.jpg","assets/ethglobaldetroit/photo-5.jpg","assets/ethglobaldetroit/photo-6.jpg","assets/ethglobaldetroit/photo-7.jpg","assets/ethglobaldetroit/video-1.mp4","assets/ethglobaldetroit/video-2.mp4"]
@@ -1233,7 +1295,7 @@
     blockchainai: {
       kicker: "2025 · Community Meetup",
       title: "The State of Blockchain & AI",
-      stats: [["78","RSVPs"],["56","Attendees"],["2","Partner orgs"]],
+      stats: [["78","RSVPs"],["2","Partner orgs"],["🤖","AI × DePIN builders"]],
       desc: "Co-hosted a high-energy Blockchain x AI meetup at Bamboo Midtown the week of Thanksgiving, bringing together Detroit's on-chain AI agents, DePIN builders, and token visionaries to connect and build before the holiday. Built in partnership with CXOMPLEX and Bamboo Midtown.",
       tags: ["AI × Blockchain","Sponsorship","Community Activation"],
       media: []
@@ -1249,7 +1311,7 @@
     decdec: {
       kicker: "2024 · Community Event",
       title: "Decentralized December",
-      stats: [["98%","RSVP → turnout"],["68+","Attendees"],["3","Sponsors"]],
+      stats: [["98%","RSVP → turnout"],["3","Sponsors"],["🎶","Live DJ"]],
       desc: "Detroit's blockchain holiday party, recognized by CoinTelegraph as one of the top US crypto holiday gatherings of 2024 alongside events in Atlanta, San Francisco, and Seattle. Managed sponsor deliverables, registration, venue logistics, and onsite production.",
       tags: ["Community Activation","Sponsorship","Event Production"],
       media: ["assets/decdec/video-1.mp4"]
@@ -1257,7 +1319,7 @@
     sui: {
       kicker: "2025 · Protocol GTM",
       title: "Sui Social: Detroit Style",
-      stats: [["98%","RSVP → turnout"],["60+","Attendees"],["🔐","Token-gated"]],
+      stats: [["98%","RSVP → turnout"],["3","Partner orgs"],["🔐","Token-gated"]],
       desc: "Launched Detroit's Sui ecosystem with a token-gated mixer at Bamboo Detroit, bringing together 60+ developers and founders timed to Sui Overflow 2025's global hackathon. Built co-production partnerships with Sui Community, ETH Detroit, and Chainlink, managing registration, budgets, logistics, and sponsor deliverables end to end.",
       tags: ["GTM Strategy","Ecosystem Building","Protocol Marketing"],
       media: ["assets/sui/video-1.mp4","assets/sui/photo-1.jpg","assets/sui/photo-2.jpg","assets/sui/photo-3.jpg","assets/sui/photo-4.jpg","assets/sui/photo-5.jpg"]
@@ -1378,6 +1440,54 @@
   document.querySelectorAll('[data-video]').forEach(card => {
     card.addEventListener('click', () => openVideo(card.dataset.video));
   });
+
+  // Scroll reveal: fade cards and section headers in as they enter the viewport
+  document.querySelectorAll('.section-header, .case-card, .watch-card, .press-card, .gallery-grid > img, .edu-card, .numbers-item').forEach(el => el.classList.add('reveal'));
+  function revealAll() { document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible')); }
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    // Safety net: never leave content hidden, even if the observer misbehaves.
+    setTimeout(revealAll, 1200);
+  } else {
+    revealAll();
+  }
+
+  // Animated counters in the numbers band (static values are already in the HTML)
+  function animateCount(el) {
+    if (el.dataset.done) return;
+    el.dataset.done = '1';
+    const target = parseInt(el.dataset.count, 10);
+    const dur = 1200;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if ('IntersectionObserver' in window) {
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.num').forEach(animateCount);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.numbers-band').forEach(band => countObserver.observe(band));
+  } else {
+    document.querySelectorAll('.num').forEach(el => { el.textContent = el.dataset.count; });
+  }
 </script>
 
 </body>
