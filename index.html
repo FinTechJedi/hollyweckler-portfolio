@@ -320,6 +320,15 @@
       transition: box-shadow 0.2s, transform 0.2s;
       text-decoration: none;
       color: inherit;
+      overflow: hidden;
+    }
+    .case-thumb {
+      width: calc(100% + 3.5rem);
+      margin: -1.75rem -1.75rem 0;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--border);
     }
     .case-card:hover {
       box-shadow: 0 8px 32px rgba(15,45,94,0.1);
@@ -902,7 +911,7 @@
         </span>
       </button>
       <button class="watch-card" data-video="assets/sui/video-1.mp4">
-        <img src="assets/sui/poster.jpg" alt="Sui Social Detroit recap" loading="lazy" />
+        <img src="assets/sui/photo-3.jpg" alt="Sui Social Detroit recap" loading="lazy" />
         <span class="watch-play">▶</span>
         <span class="watch-caption">
           <span class="watch-tag">Event Recap · 2025</span>
@@ -926,6 +935,7 @@
 
       <!-- Policy & Pints -->
       <div class="case-card">
+        <img class="case-thumb" src="assets/policypints/photo-1.jpg" alt="Policy &amp; Pints at The Congregation" loading="lazy" />
         <div class="case-bar" style="background: linear-gradient(90deg, #0f2d5e, #1a56a4);"></div>
         <div class="case-top">
           <div class="case-year">2026 · Policy &amp; Public Affairs</div>
@@ -948,6 +958,7 @@
 
       <!-- ETHGlobal Detroit -->
       <div class="case-card">
+        <img class="case-thumb" src="assets/ethglobaldetroit/photo-1.jpg" alt="ETHGlobal Detroit cowork session" loading="lazy" />
         <div class="case-bar" style="background: linear-gradient(90deg, #400c0a, #38b3cd);"></div>
         <div class="case-top">
           <div class="case-year">2026 · Developer Education &amp; Startup Pitch</div>
@@ -956,7 +967,7 @@
         <h3>ETHGlobal Detroit: Cowork to Pitch Night</h3>
         <p>Two-part program kicking off Detroit's 2026 builder pipeline. Started with a hands-on coworking and blockchain 101 session at Wayne State's Engineering Building with ETH Detroit, Detroit Blockchain Center, and Wayne State's Women Developer Student Club, then culminated in ETHConf Pitch Night Detroit, where local founders pitched live to judges and investors and the winning team earned a fast-tracked spot to pitch on the ETHConf main stage.</p>
         <div class="case-stats-row">
-          <div class="stat-item"><div class="stat-val">512</div><div class="stat-lbl">RSVPs</div></div>
+          <div class="stat-item"><div class="stat-val">3</div><div class="stat-lbl">Partner orgs</div></div>
           <div class="stat-item"><div class="stat-val">2</div><div class="stat-lbl">Part program</div></div>
           <div class="stat-item"><div class="stat-val">🏆</div><div class="stat-lbl">Fast-tracked pitch slot</div></div>
         </div>
@@ -978,7 +989,6 @@
         <h3>The State of Blockchain &amp; AI</h3>
         <p>Co-hosted a high-energy Blockchain x AI meetup at Bamboo Midtown, bringing together Detroit's on-chain AI agents, DePIN builders, and token visionaries to connect and build the week of Thanksgiving. Built in partnership with CXOMPLEX and Bamboo Midtown, the room put builders from across on-chain AI and DePIN in one place for a night.</p>
         <div class="case-stats-row">
-          <div class="stat-item"><div class="stat-val">78</div><div class="stat-lbl">RSVPs</div></div>
           <div class="stat-item"><div class="stat-val">2</div><div class="stat-lbl">Partner orgs</div></div>
           <div class="stat-item"><div class="stat-val">🤖</div><div class="stat-lbl">AI × DePIN builders</div></div>
         </div>
@@ -992,6 +1002,7 @@
 
       <!-- PizzaDAO -->
       <div class="case-card">
+        <img class="case-thumb" src="assets/pizzadao/photo-1.jpg" alt="2025 PizzaDAO Global Pizza Party" loading="lazy" />
         <div class="case-bar" style="background: linear-gradient(90deg, #f59e0b, #f97316);"></div>
         <div class="case-top">
           <div class="case-year">2021 to Present · Event Marketing</div>
@@ -1014,6 +1025,7 @@
 
       <!-- Decentralized December -->
       <div class="case-card">
+        <img class="case-thumb" src="assets/decdec/photo-1.jpg" alt="Decentralized December DJ set" loading="lazy" />
         <div class="case-bar" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6);"></div>
         <div class="case-top">
           <div class="case-year">2024 · Community Event</div>
@@ -1036,6 +1048,7 @@
 
       <!-- Sui Social -->
       <div class="case-card">
+        <img class="case-thumb" src="assets/sui/photo-3.jpg" alt="Sui Social: Detroit Style group shot" loading="lazy" />
         <div class="case-bar" style="background: linear-gradient(90deg, #06b6d4, #3b82f6);"></div>
         <div class="case-top">
           <div class="case-year">2025 · Protocol GTM</div>
@@ -1058,6 +1071,7 @@
 
       <!-- ETH Toronto -->
       <div class="case-card">
+        <img class="case-thumb" src="assets/ethtoronto/photo-1.jpg" alt="ETH Toronto 2021" loading="lazy" />
         <div class="case-bar" style="background: linear-gradient(90deg, #10b981, #3b82f6);"></div>
         <div class="case-top">
           <div class="case-year">2022 · Hackathon</div>
@@ -1073,11 +1087,12 @@
           <span class="tag">Hackathon</span>
           <span class="tag">TradFi × Web3</span>
         </div>
-        <button class="case-read" data-case="ethtoronto">View full story →</button>
+        <button class="case-read" data-case="ethtoronto">View full story &amp; photos →</button>
       </div>
 
       <!-- International Event Management -->
       <div class="case-card">
+        <img class="case-thumb" src="assets/fintechireland/photo-1.jpg" alt="FinTech Ireland 2021" loading="lazy" />
         <div class="case-bar" style="background: linear-gradient(90deg, #059669, #0284c7);"></div>
         <div class="case-top">
           <div class="case-year">2016 to 2021 · International Event Management</div>
@@ -1094,31 +1109,9 @@
           <span class="tag">Speaking</span>
           <span class="tag">Partnerships</span>
         </div>
-        <button class="case-read" data-case="fintechireland">View full story →</button>
+        <button class="case-read" data-case="fintechireland">View full story &amp; photos →</button>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- EVENT GALLERY -->
-<section id="gallery" style="background: var(--white);">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-kicker">On the Ground</div>
-      <h2 class="section-title">Event Highlights</h2>
-      <p class="section-subtitle">Real rooms, real people. A few frames from recent activations.</p>
-    </div>
-    <div class="gallery-grid">
-      <img src="assets/pizzadao/photo-1.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
-      <img src="assets/pizzadao/photo-2.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
-      <img src="assets/pizzadao/photo-3.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
-      <img src="assets/pizzadao/photo-4.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
-      <img src="assets/pizzadao/photo-5.jpg" alt="PizzaDAO Global Pizza Party 2025" loading="lazy" />
-      <img src="assets/pizzadao/photo-10.jpg" alt="PizzaDAO live art" loading="lazy" />
-      <img src="assets/sui/photo-1.jpg" alt="Sui Social Detroit" loading="lazy" />
-      <img src="assets/sui/photo-3.jpg" alt="Sui Social group shot" loading="lazy" />
-      <img src="assets/ethglobaldetroit/photo-3.jpg" alt="ETHConf Pitch Night Detroit" loading="lazy" />
     </div>
   </div>
 </section>
@@ -1287,7 +1280,7 @@
     ethglobaldetroit: {
       kicker: "2026 · Developer Education & Startup Pitch",
       title: "ETHGlobal Detroit: Cowork to Pitch Night",
-      stats: [["512","RSVPs"],["2","Part program"],["🏆","Fast-tracked pitch slot"]],
+      stats: [["3","Partner orgs"],["2","Part program"],["🏆","Fast-tracked pitch slot"]],
       desc: "A two-part program kicking off Detroit's 2026 builder pipeline. Part one was a hands-on coworking and blockchain 101 session at Wayne State's Engineering Building, built in partnership with ETH Detroit, Detroit Blockchain Center, and Wayne State's Women Developer Student Club, covering Ethereum fundamentals, Chainlink oracle integration, and AI-assisted building. Part two was ETHConf Pitch Night Detroit, where local founders pitched live to judges and investors, with the winning team earning a fast-tracked spot to pitch on the ETHConf main stage.",
       tags: ["Developer Education","Startup Pitch","ETHGlobal"],
       media: ["assets/ethglobaldetroit/photo-1.jpg","assets/ethglobaldetroit/photo-2.jpg","assets/ethglobaldetroit/photo-3.jpg","assets/ethglobaldetroit/photo-4.jpg","assets/ethglobaldetroit/photo-5.jpg","assets/ethglobaldetroit/photo-6.jpg","assets/ethglobaldetroit/photo-7.jpg","assets/ethglobaldetroit/video-1.mp4","assets/ethglobaldetroit/video-2.mp4"]
@@ -1295,7 +1288,7 @@
     blockchainai: {
       kicker: "2025 · Community Meetup",
       title: "The State of Blockchain & AI",
-      stats: [["78","RSVPs"],["2","Partner orgs"],["🤖","AI × DePIN builders"]],
+      stats: [["2","Partner orgs"],["🤖","AI × DePIN builders"]],
       desc: "Co-hosted a high-energy Blockchain x AI meetup at Bamboo Midtown the week of Thanksgiving, bringing together Detroit's on-chain AI agents, DePIN builders, and token visionaries to connect and build before the holiday. Built in partnership with CXOMPLEX and Bamboo Midtown.",
       tags: ["AI × Blockchain","Sponsorship","Community Activation"],
       media: []
@@ -1314,7 +1307,7 @@
       stats: [["98%","RSVP → turnout"],["3","Sponsors"],["🎶","Live DJ"]],
       desc: "Detroit's blockchain holiday party, recognized by CoinTelegraph as one of the top US crypto holiday gatherings of 2024 alongside events in Atlanta, San Francisco, and Seattle. Managed sponsor deliverables, registration, venue logistics, and onsite production.",
       tags: ["Community Activation","Sponsorship","Event Production"],
-      media: ["assets/decdec/video-1.mp4"]
+      media: ["assets/decdec/video-1.mp4","assets/decdec/photo-1.jpg"]
     },
     sui: {
       kicker: "2025 · Protocol GTM",
@@ -1330,7 +1323,7 @@
       stats: [["$15K","Hedera prize"],["🥇","First place"]],
       desc: "Built a decentralized alternative credit rating system that won first place in Hedera's $15K prize track, bridging traditional finance and on-chain identity through a working proof of concept built in a live hackathon environment.",
       tags: ["DeFi","Hackathon","TradFi × Web3"],
-      media: []
+      media: ["assets/ethtoronto/photo-1.jpg"]
     },
     fintechireland: {
       kicker: "2016 to 2021 · International Event Management",
@@ -1338,7 +1331,7 @@
       stats: [["2,000+","Summit attendees"],["15+","Developer hackathons"],["🌍","US → Europe"]],
       desc: "Managed API partner programs and developer relations across the United States and Europe, including FinTech Ireland, the Envestnet Advisor Summit, and 15+ developer hackathons with enterprise partners like PNC and Citibank. Coordinated concurrent events, executive stakeholders, and cross-functional teams across regions.",
       tags: ["International Event Management","Speaking","Partnerships"],
-      media: []
+      media: ["assets/fintechireland/photo-1.jpg"]
     }
   };
 
