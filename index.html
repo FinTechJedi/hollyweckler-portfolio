@@ -71,8 +71,9 @@
     }
     .nav-links {
       display: flex;
-      gap: 2.25rem;
+      gap: 1.35rem;
       list-style: none;
+      align-items: center;
     }
     .nav-links a {
       color: var(--muted);
@@ -83,7 +84,6 @@
       letter-spacing: 0.01em;
     }
     .nav-links a:hover { color: var(--blue); }
-
     /* ── HERO ── */
     .hero {
       background: var(--white);
@@ -850,7 +850,7 @@
       <li><a href="#writing">Writing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#resume">Resume</a></li>
-      <li><a href="mailto:holly.m.weckler@gmail.com">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -872,7 +872,7 @@
       </p>
       <div class="hero-actions">
         <a href="#work" class="btn-primary">View My Work</a>
-        <a href="mailto:holly.m.weckler@gmail.com" class="btn-ghost">Get in Touch</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
       </div>
       <div class="social-row">
         <a href="https://linkedin.com/in/hollyweckler" target="_blank" class="social-link">
@@ -1222,12 +1222,12 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer id="contact">
   <p>
     © 2026 Holly Marie Weckler &nbsp;·&nbsp;
     <a href="https://linkedin.com/in/hollyweckler" target="_blank">LinkedIn</a>
     <a href="https://x.com/Hollycopter_333" target="_blank">Twitter/X</a>
-    <a href="mailto:holly.m.weckler@gmail.com">Email</a>
+    <a href="mailto:holly.m.weckler@gmail.com">holly.m.weckler@gmail.com</a>
   </p>
 </footer>
 
