@@ -782,6 +782,18 @@
     }
     .watch-caption strong { font-family: 'Playfair Display', serif; font-size: 1.15rem; line-height: 1.2; }
     .watch-caption small { font-size: 0.78rem; color: rgba(255,255,255,0.85); line-height: 1.5; }
+    .watch-metric {
+      display: inline-block;
+      width: fit-content;
+      margin-top: 0.35rem;
+      padding: 0.22rem 0.55rem;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.16);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
 
     .content-case-note {
       max-width: 850px;
@@ -799,6 +811,27 @@
       margin-bottom: 0.65rem;
     }
     .content-case-note p { color: var(--muted); font-size: 0.92rem; line-height: 1.75; }
+    .ugc-services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 0 0 3rem;
+    }
+    .ugc-service {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem;
+    }
+    .ugc-service strong { display: block; color: var(--navy); font-size: 0.9rem; margin-bottom: 0.35rem; }
+    .ugc-service span { color: var(--muted); font-size: 0.8rem; line-height: 1.55; }
+    .samples-heading {
+      font-family: 'Playfair Display', serif;
+      color: var(--navy);
+      font-size: 1.65rem;
+      margin-bottom: 1.25rem;
+    }
+    .ugc-samples { grid-template-columns: repeat(2, 1fr); }
 
     .case-top {
       display: flex;
@@ -823,6 +856,7 @@
       .press-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .watch-grid { grid-template-columns: repeat(2, 1fr); }
+      .ugc-services { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 680px) {
       .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 48px 1.25rem 48px; }
@@ -832,6 +866,7 @@
       .press-grid { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: 1fr; }
       .watch-grid { grid-template-columns: 1fr; }
+      .ugc-services { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       section { padding: 56px 1.25rem; }
       .partners-band { padding: 2.25rem 1.25rem; }
@@ -848,7 +883,7 @@
       <li><a href="index.html">Career Portfolio</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#content">UGC &amp; Content</a></li>
-      <li><a href="#watch">Watch</a></li>
+      <li><a href="#watch">Ecosystem Events</a></li>
       <li><a href="#writing">Writing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#resume">Resume</a></li>
@@ -861,16 +896,16 @@
 <header class="hero">
   <div class="hero-inner">
     <div>
-      <span class="hero-kicker">Partnerships &amp; Ecosystem Leader · Web3 · Detroit</span>
+      <span class="hero-kicker">Partnerships · Events · Content · Detroit</span>
       <h1>Holly Marie<br>Weckler</h1>
       <p class="hero-bio">
-        I build partnerships and programs that turn complex technology into adoption, revenue, and durable ecosystems. Ten-plus years across FinTech, Web3, and developer platforms.
+        I bring people, ideas, and emerging technology together, then turn them into partnerships, events, and content that move people to act.
       </p>
       <p class="hero-bio">
-        Director of Partnerships &amp; Board Member at <strong>Detroit Blockchain Center</strong> (volunteer nonprofit leadership) and founder of <strong>Copter Consulting</strong>, with past client work including Sui Foundation and Stand with Crypto. Earlier: Developer Marketing at Figment and Product Marketing at Notifi, with roots in fintech developer ecosystems at Envestnet | Yodlee.
+        For more than a decade, I have built developer ecosystems, launched community campaigns, produced events, and translated complex products for real audiences. Today I serve as Director of Partnerships and a Board Member at <strong>Detroit Blockchain Center</strong> and lead <strong>Copter Consulting</strong>. My work ranges from strategy and partnerships to short-form video and on-camera storytelling.
       </p>
       <p class="hero-bio">
-        Open to senior partnerships, ecosystem, experiential marketing, content creation, and program leadership roles, remote or Metro Detroit.
+        I am open to senior partnerships, ecosystem, experiential marketing, and program leadership roles, along with select UGC and content projects.
       </p>
       <div class="hero-actions">
         <a href="#work" class="btn-primary">View My Work</a>
@@ -906,21 +941,29 @@
   <div class="section-inner">
     <div class="section-header">
       <div class="section-kicker">UGC &amp; Short-Form Content</div>
-      <h2 class="section-title">Clear, Human Content That Gives People a Reason to Care</h2>
-      <p class="section-subtitle">I create approachable videos for products, experiences, and events, especially when an audience needs context before it will trust the offer or take the next step.</p>
+      <h2 class="section-title">UGC for Brands That Need to Be Understood and Remembered</h2>
+      <p class="section-subtitle">I create natural, platform-ready content for brands in technology, lifestyle, events, and community. Every video starts with the audience: what they need to understand, trust, feel, or do next.</p>
+    </div>
+    <div class="ugc-services" aria-label="UGC formats available">
+      <div class="ugc-service"><strong>Product demos</strong><span>Clear, conversational demonstrations that show how a product works and why it matters.</span></div>
+      <div class="ugc-service"><strong>Testimonials &amp; voiceovers</strong><span>Human stories, reactions, and voice-led content that make a brand feel credible and relatable.</span></div>
+      <div class="ugc-service"><strong>Short-form social</strong><span>Hooks, scripts, filming, captions, and edits for TikTok, Reels, Facebook, and Shorts.</span></div>
+      <div class="ugc-service"><strong>Event promos &amp; recaps</strong><span>Content that builds interest before an event and captures the energy and proof afterward.</span></div>
     </div>
     <div class="content-case-note">
-      <h3>UGC Use Case: Building Trust for World</h3>
-      <p>Access Point Studios operated Michigan's first World Orb location at Great Lakes Crossing. The challenge was not awareness alone. Many local residents, including people who could benefit most from the gift-card incentive, were skeptical of the technology and unsure whether the offer was legitimate. With limited content support from World, I tested a local TikTok strategy built around clear answers, recognizable places, and useful details. TikTok was the right medium because the videos could be shared into large community groups and reach people beyond the account's follower base. These two videos became early standouts on a new account with fewer than 100 followers.</p>
+      <h3>Founder-Led UGC Use Case: World</h3>
+      <p>As founders of Access Point Studios, we brought Michigan's first World Orb location to Great Lakes Crossing and needed to generate foot traffic ourselves. The audience had real questions about the technology, the gift-card incentive, and whether the offer was legitimate. With limited marketing support from World, I created simple local TikToks built around recognizable places, useful details, and reasons to visit. TikTok gave us a format that could be shared into large community groups and reach far beyond our own follower base. The two World videos below performed especially well for a new account with fewer than 100 followers.</p>
     </div>
-    <div class="watch-grid">
+    <h3 class="samples-heading">Four Examples, Four Different Jobs</h3>
+    <div class="watch-grid ugc-samples">
       <a class="watch-card external" href="https://www.tiktok.com/@accesspointstudios/video/7631013587590335774" target="_blank" rel="noreferrer">
         <img src="assets/ugc/world-gift-wheel-thumbnail.jpg" alt="Free gift card wheel at Great Lakes Crossing from the World Orb Michigan TikTok video" loading="lazy" />
         <span class="watch-play">↗</span>
         <span class="watch-caption">
           <span class="watch-tag">World UGC · Trust Building</span>
           <strong>The Free Gift Card Wheel</strong>
-          <small>A direct, curiosity-led explanation of the offer and where people could find it. Watch on TikTok.</small>
+          <small>Goal: Turn curiosity into mall traffic by making the incentive feel real and easy to find.</small>
+          <span class="watch-metric">4,150 views · 7 shares</span>
         </span>
       </a>
       <a class="watch-card external" href="https://www.tiktok.com/@accesspointstudios/video/7631212439526198558" target="_blank" rel="noreferrer">
@@ -929,16 +972,28 @@
         <span class="watch-caption">
           <span class="watch-tag">World UGC · Shareable Story</span>
           <strong>The Bus to Great Lakes Crossing</strong>
-          <small>A practical local story showing how to reach the activation without paying for a ride both ways. Watch on TikTok.</small>
+          <small>Goal: Remove a transportation barrier through a useful, highly shareable local story.</small>
+          <span class="watch-metric">2,113 views · 5 shares</span>
         </span>
       </a>
       <button class="watch-card" data-video="assets/ugc/blockchain-boats-8-17.mp4">
-        <img src="assets/ugc/blockchain-boats-8-17.jpg" alt="Blockchain and Boats event promo and recap video" loading="lazy" />
+        <img src="assets/ugc/blockchain-boats-8-17.jpg" alt="Blockchain and Boats event promotional video" loading="lazy" />
         <span class="watch-play">▶</span>
         <span class="watch-caption">
-          <span class="watch-tag">Recent Event · Promo &amp; Recap</span>
-          <strong>Blockchain &amp; Boats</strong>
-          <small>Short-form event storytelling that moves from the invitation to the experience on the water.</small>
+          <span class="watch-tag">Event Content · Promo</span>
+          <strong>Blockchain &amp; Boats Promo</strong>
+          <small>Goal: Turn the concept, setting, and limited capacity into a clear reason to register for our first paid event.</small>
+          <span class="watch-metric">27 of 30 tickets sold</span>
+        </span>
+      </button>
+      <button class="watch-card" data-video="assets/ugc/blockchain-boats-recap-8-24.mp4">
+        <img src="assets/ugc/blockchain-boats-recap-8-24.jpg" alt="Blockchain and Boats event recap group photo" loading="lazy" />
+        <span class="watch-play">▶</span>
+        <span class="watch-caption">
+          <span class="watch-tag">Event Content · Recap</span>
+          <strong>Blockchain &amp; Boats Recap</strong>
+          <small>Goal: Show the people, setting, and experience so the next event already has social proof.</small>
+          <span class="watch-metric">First paid event · 90% sold</span>
         </span>
       </button>
     </div>
@@ -949,9 +1004,9 @@
 <section id="watch" style="background: var(--white);">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-kicker">Watch</div>
-      <h2 class="section-title">See the Work in Motion</h2>
-      <p class="section-subtitle">Recaps and reels from recent activations. Click to play.</p>
+      <div class="section-kicker">Ecosystem Growth Events</div>
+      <h2 class="section-title">Events Built to Grow Ecosystems</h2>
+      <p class="section-subtitle">I built these activations to bring partners, builders, and communities together—and turn participation into lasting ecosystem momentum. Click any video to watch.</p>
     </div>
     <div class="watch-grid">
       <button class="watch-card" data-video="assets/pizzadao/video-1.mp4">
