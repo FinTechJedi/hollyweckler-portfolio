@@ -832,6 +832,30 @@
       margin-bottom: 1.25rem;
     }
     .ugc-samples { grid-template-columns: repeat(2, 1fr); }
+    .ugc-samples .watch-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+    }
+    .ugc-samples .watch-media {
+      position: relative;
+      display: block;
+      background: #000;
+    }
+    .ugc-samples .watch-caption {
+      position: static;
+      flex: 1;
+      padding: 1.15rem 1.25rem 1.25rem;
+      background: var(--white);
+      color: var(--navy);
+      border-top: 1px solid var(--border);
+    }
+    .ugc-samples .watch-tag { color: var(--blue); }
+    .ugc-samples .watch-caption small { color: var(--muted); }
+    .ugc-samples .watch-metric {
+      background: #eaf2ff;
+      color: var(--blue);
+    }
 
     .case-top {
       display: flex;
@@ -955,8 +979,10 @@
     <h3 class="samples-heading">Five Examples, Five Different Jobs</h3>
     <div class="watch-grid ugc-samples">
       <a class="watch-card external" href="https://www.tiktok.com/@accesspointstudios/video/7631013587590335774" target="_blank" rel="noreferrer">
-        <img src="assets/ugc/world-gift-wheel-thumbnail.jpg" alt="Free gift card wheel at Great Lakes Crossing from the World Orb Michigan TikTok video" loading="lazy" />
-        <span class="watch-play">↗</span>
+        <span class="watch-media">
+          <img src="assets/ugc/world-gift-wheel-thumbnail.jpg" alt="Free gift card wheel at Great Lakes Crossing from the World Orb Michigan TikTok video" loading="lazy" />
+          <span class="watch-play">↗</span>
+        </span>
         <span class="watch-caption">
           <span class="watch-tag">World UGC · Trust Building</span>
           <strong>The Free Gift Card Wheel</strong>
@@ -965,8 +991,10 @@
         </span>
       </a>
       <a class="watch-card external" href="https://www.tiktok.com/@accesspointstudios/video/7631212439526198558" target="_blank" rel="noreferrer">
-        <img src="assets/ugc/aps-bus-thumbnail.jpg" alt="Bus ride to Great Lakes Crossing from the Access Point Studios TikTok video" loading="lazy" />
-        <span class="watch-play">↗</span>
+        <span class="watch-media">
+          <img src="assets/ugc/aps-bus-thumbnail.jpg" alt="Bus ride to Great Lakes Crossing from the Access Point Studios TikTok video" loading="lazy" />
+          <span class="watch-play">↗</span>
+        </span>
         <span class="watch-caption">
           <span class="watch-tag">World UGC · Shareable Story</span>
           <strong>The Bus to Great Lakes Crossing</strong>
@@ -975,8 +1003,10 @@
         </span>
       </a>
       <button class="watch-card" data-video="assets/ugc/blockchain-boats-8-17.mp4">
-        <img src="assets/ugc/blockchain-boats-8-17.jpg" alt="Blockchain and Boats event promotional video" loading="lazy" />
-        <span class="watch-play">▶</span>
+        <span class="watch-media">
+          <img src="assets/ugc/blockchain-boats-8-17.jpg" alt="Blockchain and Boats event promotional video" loading="lazy" />
+          <span class="watch-play">▶</span>
+        </span>
         <span class="watch-caption">
           <span class="watch-tag">Event Content · Promo</span>
           <strong>Blockchain &amp; Boats Promo</strong>
@@ -985,8 +1015,10 @@
         </span>
       </button>
       <button class="watch-card" data-video="assets/ugc/blockchain-boats-recap-8-24.mp4">
-        <img src="assets/ugc/blockchain-boats-recap-8-24.jpg" alt="Blockchain and Boats event recap group photo" loading="lazy" />
-        <span class="watch-play">▶</span>
+        <span class="watch-media">
+          <img src="assets/ugc/blockchain-boats-recap-8-24.jpg" alt="Blockchain and Boats event recap group photo" loading="lazy" />
+          <span class="watch-play">▶</span>
+        </span>
         <span class="watch-caption">
           <span class="watch-tag">Event Content · Recap</span>
           <strong>Blockchain &amp; Boats Recap</strong>
@@ -995,8 +1027,10 @@
         </span>
       </button>
       <button class="watch-card" data-video="assets/ugc/policy-pints-token-is-proof.mp4">
-        <img src="assets/ugc/policy-pints-token-is-proof.jpg" alt="Policy and Pints branded social clip explaining tokenization" loading="lazy" />
-        <span class="watch-play">▶</span>
+        <span class="watch-media">
+          <img src="assets/ugc/policy-pints-token-is-proof.jpg" alt="Policy and Pints branded social clip explaining tokenization" loading="lazy" />
+          <span class="watch-play">▶</span>
+        </span>
         <span class="watch-caption">
           <span class="watch-tag">Event Content · Repurposing</span>
           <strong>Policy &amp; Pints: A Token Is Proof</strong>
